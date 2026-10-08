@@ -1,0 +1,8 @@
+opencv-python
+numpy
+pillow
+pyyaml
+pydantic
+onnxruntime
+loguru
+tqdm

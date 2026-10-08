@@ -1,0 +1,40 @@
+{
+  "schema_version": "aizipai-card-classifier-v1",
+  "architecture": "mobilenet_v3_small_fp32",
+  "labels": [
+    "一",
+    "二",
+    "三",
+    "四",
+    "五",
+    "六",
+    "七",
+    "八",
+    "九",
+    "十",
+    "壹",
+    "贰",
+    "叁",
+    "肆",
+    "伍",
+    "陆",
+    "柒",
+    "捌",
+    "玖",
+    "拾",
+    "王"
+  ],
+  "input_size": 160,
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "temperature": 1.0,
+  "training_seed": 20260808
+}

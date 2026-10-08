@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">字牌AI</string>
+    <string name="app_version_label">版本：1.0-r73-v9-pending-card-multiscale</string>
+    <string name="mode_no_wang">1v1 无王</string>
+    <string name="mode_wang">1v1 有王</string>
+    <string name="save">保存模式</string>
+    <string name="saved">已保存</string>
+    <string name="accessibility_service_description">识别字牌画面并执行已确认的策略动作</string>
+    <string name="accessibility_permission">无障碍服务</string>
+    <string name="notification_permission">运行摘要通知</string>
+    <string name="background_permission">后台运行保护</string>
+    <string name="permission_enabled">已开启</string>
+    <string name="permission_disabled">未开启</string>
+    <string name="permission_reconnect">需重连</string>
+    <string name="open_settings">去开启</string>
+    <string name="start_runtime">启动</string>
+    <string name="stop_runtime">停止</string>
+    <string name="volume_hint">音量+启动　音量-停止</string>
+</resources>

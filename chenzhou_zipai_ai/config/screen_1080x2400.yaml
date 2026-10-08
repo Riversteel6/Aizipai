@@ -1,0 +1,92 @@
+screen:
+  width: 2344
+  height: 1080
+  scale_mode: fixed_width
+
+play:
+  discard_line_y: 547
+  discard_drop_y: 320
+  drag_duration_ms: 850
+  drag_start_jitter_px: 10
+  drag_end_jitter_x_px: 15
+  drag_end_jitter_y_px: 10
+  drag_duration_jitter_ms: 80
+
+regions:
+  my_hand:
+    x: 430
+    y: 660
+    w: 1680
+    h: 420
+
+  opponent_discards:
+    x: 1620
+    y: 70
+    w: 455
+    h: 340
+
+  my_discards:
+    x: 1620
+    y: 480
+    w: 455
+    h: 350
+
+  pending_action_card:
+    x: 1087
+    y: 223
+    w: 220
+    h: 450
+
+  remaining_deck_count:
+    x: 1020
+    y: 230
+    w: 300
+    h: 95
+
+  opponent_pending_card:
+    x: 377
+    y: 119
+    w: 155
+    h: 438
+
+  my_melds:
+    x: 60
+    y: 500
+    w: 560
+    h: 430
+
+  my_dealer_marker:
+    x: 95
+    y: 900
+    w: 90
+    h: 95
+
+  opponent_melds:
+    x: 60
+    y: 160
+    w: 560
+    h: 460
+
+  buttons:
+    x: 1400
+    y: 360
+    w: 940
+    h: 330
+
+  discard_button:
+    x: 925
+    y: 365
+    w: 508
+    h: 201
+
+  chi_options:
+    x: 1580
+    y: 0
+    w: 520
+    h: 540
+
+  compare_options:
+    x: 1320
+    y: 0
+    w: 310
+    h: 540

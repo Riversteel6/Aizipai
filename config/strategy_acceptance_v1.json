@@ -1,0 +1,43 @@
+{
+  "schema_version": "aizipai-strategy-acceptance-v1",
+  "required_modes": [
+    {"id": "2p_off", "players": 2, "wildcard_enabled": false},
+    {"id": "2p_on", "players": 2, "wildcard_enabled": true},
+    {"id": "3p_off", "players": 3, "wildcard_enabled": false},
+    {"id": "3p_on", "players": 3, "wildcard_enabled": true}
+  ],
+  "root_counterfactual": {
+    "required_batches_per_state": 5,
+    "required_worlds_per_batch": 128,
+    "minimum_changed_action_coverage": 1.0,
+    "maximum_harmful_overrides": 0
+  },
+  "formal_league": {
+    "minimum_games": 500,
+    "minimum_paired_score_lower_bound": 0.0,
+    "minimum_paired_outcome_lower_bound": 0.0,
+    "maximum_outcome_sign_test_p": 0.05,
+    "minimum_strong_pool_win_lower_bound": 0.5,
+    "maximum_decision_budget_fallback_fraction": 0.01,
+    "maximum_discard_deadline_fraction": 0.01,
+    "maximum_response_deadline_fraction": 0.01,
+    "maximum_discard_p95_ms": 10000.0,
+    "maximum_response_p95_ms": 10000.0
+  },
+  "ordinary_league": {
+    "minimum_games": 500,
+    "minimum_win_lower_bound": 0.65
+  },
+  "device_soak": {
+    "minimum_games_per_mode": 20,
+    "minimum_primary_mode_games": 100,
+    "maximum_cycle_p95_ms": 15000.0,
+    "maximum_critical_failures": 0,
+    "maximum_strategy_mismatches": 0
+  },
+  "external_calibration": {
+    "minimum_games": 100,
+    "minimum_reviewed_decisions": 500,
+    "require_professional_level_supported": true
+  }
+}

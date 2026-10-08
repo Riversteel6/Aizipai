@@ -1,0 +1,29 @@
+[project]
+name = "aizipai"
+version = "0.1.0"
+description = "郴州字牌 + 红黑牌 + 王牌癞子单机 AI 陪练脚本"
+requires-python = ">=3.11"
+dependencies = [
+  "opencv-python>=4.9",
+  "numpy>=1.26",
+  "onnxruntime>=1.20",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.5",
+]
+vision-train = [
+  "onnx>=1.17",
+  "torch>=2.6",
+  "torchvision>=0.21",
+]
+
+[tool.ruff]
+line-length = 100
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "chenzhou_zipai_ai"]
+testpaths = ["tests", "chenzhou_zipai_ai/tests"]
+addopts = ["--import-mode=importlib"]

@@ -1,0 +1,181 @@
+game:
+  name: chenzhou_zipai_red_black_wild
+  players: 3
+  deck_copies: 4
+
+cards:
+  normal:
+    - 一
+    - 二
+    - 三
+    - 四
+    - 五
+    - 六
+    - 七
+    - 八
+    - 九
+    - 十
+    - 壹
+    - 贰
+    - 叁
+    - 肆
+    - 伍
+    - 陆
+    - 柒
+    - 捌
+    - 玖
+    - 拾
+
+  red:
+    - 二
+    - 七
+    - 十
+    - 贰
+    - 柒
+    - 拾
+
+wildcard:
+  enabled: true
+  copies: 4
+  label: 王
+  name: 王
+  can_replace_any_card: true
+  can_form_chi: false
+  can_form_peng: false
+  can_form_wei: false
+  can_form_pao: false
+  can_form_ti: false
+  can_hu_with_wildcard: true
+  wildcard_groups_count_xi: true
+  fixed_after_meld: true
+
+rules:
+  min_xi: 9
+  required_meld_groups: 7
+  allow_1510: false
+  must_hu: none
+  zimo_double: false
+  mao_hu: false
+  forbid_return_original: false
+  red_black_mode: red_black_mingtang
+  piao_mode: none
+  ming_long: after_deal
+  xi_to_tun: 3_to_1
+  base_tun_at_9_xi: 1
+
+ting:
+  max_exact_draw_enum_cards: 21
+
+scoring:
+  red_hu_min_red: 13
+  black_hu_red_count: 0
+  one_red_hu_red_count: 1
+  red_black_special_point: 1
+  red_black_point_multiplier: 1
+
+chi:
+  enabled: true
+  pass_if_uncertain: true
+  min_confidence: 0.75
+  min_ev_gain: 20
+  allow_break_soft_protection_if_gain: 80
+  forbid_break_hard_protection: true
+  forbid_use_wildcard_unless_immediate_hu_or_big_gain: true
+  simulate_followup_discard: true
+
+peng:
+  min_ev_gain: 20
+  simulate_followup_discard: true
+  pass_if_uncertain: true
+
+response_strategy:
+  pass_is_valid_action: true
+  chi_min_ev_gain: 20
+  peng_min_ev_gain: 20
+  reject_if_breaks_hard_protected: true
+  reject_if_breaks_double_sequence_without_big_gain: true
+  reject_if_breaks_complete_meld_without_big_gain: true
+  reject_if_consumes_wildcard_without_big_gain: true
+  simulate_followup_discard: true
+  pass_if_option_uncertain: true
+  ignore_auto_pao_ti_decision: true
+  wait_on_auto_meld_pending: true
+
+structure_loss_weights:
+  break_hard_protected: 10000
+  break_exact_triplet: 3000
+  break_exact_quad: 5000
+  break_double_sequence: 1200
+  break_special_2710: 1200
+  break_special_123: 1000
+  break_normal_sequence: 600
+  break_mixed_same_rank_triplet: 800
+  break_pair: 300
+  consume_wildcard: 10000
+
+response_gain_weights:
+  peng_meld_value: 120
+  chi_normal_sequence_value: 80
+  chi_special_123_value: 180
+  chi_special_2710_value: 200
+  immediate_hu_value: 10000
+  ting_improvement_value: 500
+  xi_gain_per_point: 40
+
+strategy:
+  hard_protection_enabled: true
+  soft_protection_enabled: true
+  resource_allocation_enabled: true
+  local_runtime_only: true
+
+safety:
+  forbid_action_plan_reselect: true
+  halt_on_conflict: true
+  halt_on_uncertain_recognition: true
+  halt_if_only_hard_protected_clickable_but_free_cards_exist: true
+
+logging:
+  enabled: true
+  save_raw_screenshot: true
+  save_debug_screenshot: true
+  save_every_frame: false
+  save_decision_frames: true
+  save_error_frames: true
+  save_before_after_action: true
+  max_sessions_keep: 20
+  compress_round_on_end: true
+
+weights:
+  immediate_hu: 10000
+  xi_enough: 1000
+  xi_per_point: 40
+  ting_ready: 500
+  ting_improvement: 120
+  wildcard_keep: 500
+  wildcard_discard_penalty: 10000
+  wildcard_use_low_value_penalty: 200
+  hard_protected_break_penalty: 10000
+  exact_triplet_break_penalty: 3000
+  exact_quad_break_penalty: 5000
+  mixed_same_rank_break_penalty: 1000
+  special_2710_break_penalty: 1800
+  special_123_break_penalty: 1500
+  normal_sequence_break_penalty: 900
+  pair_break_penalty: 650
+  chi_normal_sequence_value: 220
+  chi_special_2710_value: 320
+  chi_special_123_value: 280
+  chi_mixed_same_rank_value: 220
+  chi_exact_triplet_value: 220
+  orphan_discard_bonus: 300
+  weak_potential_discard_bonus: 120
+  free_card_discard_bonus: 200
+  red_card_keep_bonus: 80
+  red_card_late_danger: 260
+  danger_base_penalty: 160
+  high_danger_threshold: 250
+  high_danger_multiplier: 1.6
+  opponent_pao_risk_penalty: 500
+  opponent_hu_risk_penalty: 1000
+  chi_min_ev_gain: 20
+  peng_min_ev_gain: 20

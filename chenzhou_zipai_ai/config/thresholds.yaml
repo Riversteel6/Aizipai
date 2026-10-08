@@ -1,0 +1,4 @@
+vision:
+  card_match_confidence: 0.85
+  button_match_confidence: 0.75
+  low_confidence_warning: 0.70
